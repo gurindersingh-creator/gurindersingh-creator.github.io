@@ -1,0 +1,1318 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>WaheguruJaap — Mool Mantar Jaap</title>
+
+<meta name="description" content="Daily sangat Mool Mantar jaap count — WaheguruJaap.com">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Cormorant+Garamond:wght@400;500;600;700&family=Noto+Serif+Gurmukhi:wght@500;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+<style>
+
+  :root{
+
+    --bg-cream:#FFFFFF;
+
+    --bg-panel:#FFFFFF;
+
+    --bg-panel-2:#FCFCFC;
+
+    --ink:#20211E;
+
+    --navy:#0F2A52;
+
+    --navy-deep:#081A33;
+
+    --saffron:#E8690F;
+
+    --saffron-soft:#F2A868;
+
+    --navy-mid:#123563;
+
+    --navy-soft:#5B6E8C;
+
+    --line: rgba(15,42,82,0.15);
+
+  }
+
+  *{box-sizing:border-box;}
+
+  html,body{margin:0;padding:0;}
+
+  body{
+
+    background:
+
+      radial-gradient(ellipse at top left, rgba(232,105,15,0.07), transparent 55%),
+
+      radial-gradient(ellipse at bottom right, rgba(15,42,82,0.06), transparent 55%),
+
+      repeating-linear-gradient(45deg, rgba(15,42,82,0.045) 0 1px, transparent 1px 26px),
+
+      repeating-linear-gradient(-45deg, rgba(15,42,82,0.045) 0 1px, transparent 1px 26px),
+
+      var(--bg-cream);
+
+    color:var(--ink);
+
+    font-family:'Cormorant Garamond',serif;
+    font-size:18px;
+    line-height:1.5;
+
+    min-height:100vh;
+
+    -webkit-font-smoothing:antialiased;
+
+  }
+
+
+
+  .frame{
+
+    position:relative;
+
+    max-width:960px;
+
+    margin:26px auto;
+
+    border:1px solid var(--saffron);
+
+    box-shadow:0 0 0 6px var(--bg-cream), 0 0 0 7px var(--saffron-soft);
+
+    border-radius:10px;
+
+    background:var(--bg-panel-2);
+
+  }
+
+  @media (max-width:600px){ .frame{ margin:12px; box-shadow:0 0 0 4px var(--bg-cream), 0 0 0 5px var(--saffron-soft); } }
+
+  .corner{position:absolute;width:34px;height:34px;pointer-events:none;}
+
+  .corner svg{width:100%;height:100%;display:block;}
+
+  .corner.tl{top:-1px;left:-1px;}
+
+  .corner.tr{top:-1px;right:-1px;transform:scaleX(-1);}
+
+  .corner.bl{bottom:-1px;left:-1px;transform:scaleY(-1);}
+
+  .corner.br{bottom:-1px;right:-1px;transform:scale(-1,-1);}
+
+
+
+  .brand-mark{
+
+    text-align:center;
+
+    padding:14px 20px 0;
+
+    font-family:'JetBrains Mono',monospace;
+
+    font-size:13px;
+
+    letter-spacing:.14em;
+
+    text-transform:uppercase;
+
+    color:var(--navy-soft);
+
+  }
+
+  .brand-mark a{color:inherit;text-decoration:none;}
+
+  .brand-mark a:hover{color:var(--saffron);}
+
+
+
+  .wrap{max-width:920px;margin:0 auto;padding:22px 20px 60px;}
+
+
+
+  .gurmukhi-title{
+
+    font-family:'Noto Serif Gurmukhi',serif;
+
+    font-weight:700;
+
+    font-size:clamp(24px,4.5vw,32px);
+
+    color:var(--navy);
+
+    margin:0 0 4px;
+
+    text-align:center;
+
+  }
+
+  h1.title{
+
+    font-family:'Playfair Display',serif;
+
+    font-weight:800;
+
+    font-size:clamp(30px,6vw,48px);
+
+    line-height:1.05;
+
+    letter-spacing:.005em;
+
+    margin:0 0 26px;
+
+    color:var(--navy);
+
+    text-align:center;
+
+  }
+
+  h1.title span{color:var(--saffron);}
+
+
+
+  .divider{
+
+    display:flex;align-items:center;gap:12px;
+
+    margin:22px 0;
+
+    color:var(--saffron);
+
+  }
+
+  .divider .ln{flex:1;height:1px;background:linear-gradient(90deg, transparent, var(--saffron-soft), transparent);}
+
+  .divider .mark{font-size:15px;letter-spacing:.1em;}
+
+
+
+  .total-panel{
+
+    background:var(--bg-panel);
+
+    border:1px solid var(--line);
+
+    border-radius:6px;
+
+    padding:30px 26px 28px;
+
+    position:relative;
+
+    overflow:hidden;
+
+    box-shadow:0 1px 0 rgba(181,138,56,0.15) inset;
+
+  }
+
+  .total-panel::before{
+
+    content:"";position:absolute;inset:0;
+
+    border:1px solid rgba(181,138,56,0.25);
+
+    border-radius:6px;
+
+    margin:6px;
+
+    pointer-events:none;
+
+  }
+
+  .total-label{
+
+    font-family:'JetBrains Mono',monospace;
+
+    font-size:14px;
+
+    letter-spacing:.14em;
+
+    text-transform:uppercase;
+
+    color:var(--navy-soft);
+
+    margin-bottom:6px;
+
+    position:relative;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:10px;
+
+  }
+
+  .refresh-btn{
+
+    background:none;
+
+    border:1px solid var(--line);
+
+    color:var(--navy-soft);
+
+    font-family:'JetBrains Mono',monospace;
+
+    font-size:13px;
+
+    letter-spacing:.05em;
+
+    padding:5px 10px;
+
+    border-radius:3px;
+
+    cursor:pointer;
+
+  }
+
+  .refresh-btn:hover{color:var(--navy);border-color:var(--saffron);}
+
+  .total-number{
+
+    font-family:'Playfair Display',serif;
+
+    font-weight:900;
+
+    font-size:clamp(50px,12vw,98px);
+
+    line-height:.95;
+
+    color:var(--saffron);
+
+    position:relative;
+
+    display:flex;
+
+    align-items:baseline;
+
+    gap:10px;
+
+    flex-wrap:wrap;
+
+  }
+
+  .total-number small{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-style:italic;
+
+    font-size:19px;
+
+    color:var(--navy-soft);
+
+    font-weight:600;
+
+  }
+
+
+
+  .card{
+
+    background:var(--bg-panel);
+
+    border:1px solid var(--line);
+
+    border-radius:6px;
+
+    padding:24px;
+
+    margin-top:20px;
+
+  }
+
+  .card h2{
+
+    font-family:'Playfair Display',serif;
+
+    font-weight:800;
+
+    font-size:23px;
+
+    margin:0 0 18px;
+
+    color:var(--navy);
+
+  }
+
+  form{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+
+  @media (max-width:560px){ form{grid-template-columns:1fr;} }
+
+  .field{display:flex;flex-direction:column;gap:6px;}
+
+  .field label{
+
+    font-family:'JetBrains Mono',monospace;
+
+    font-size:15px;
+	
+	font-weight:700;
+
+    letter-spacing:.1em;
+
+    text-transform:uppercase;
+
+    color:var(--navy);
+
+  }
+
+  .field input{
+
+    background:var(--bg-cream);
+
+    border:1px solid var(--line);
+
+    border-radius:3px;
+
+    color:var(--ink);
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:19px;
+
+    padding:10px 12px;
+
+    outline:none;
+
+    transition:border-color .15s ease;
+
+  }
+
+  .field input:focus{border-color:var(--saffron);}
+
+  .field input::placeholder{color:#A99878;}
+
+  .submit-row{grid-column:1/-1;display:flex;align-items:center;gap:14px;margin-top:2px;}
+
+  button.log-btn{
+
+    background:var(--navy-mid);
+
+    color:#FBF3E3;
+
+    border:none;
+
+    border-radius:3px;
+
+    font-family:'Playfair Display',serif;
+
+    font-weight:700;
+
+    font-size:17px;
+
+    letter-spacing:.02em;
+
+    padding:12px 28px;
+
+    cursor:pointer;
+
+    transition:transform .1s ease, background .15s ease;
+
+  }
+
+  button.log-btn:hover{background:var(--navy-deep);}
+
+  button.log-btn:active{transform:scale(.97);}
+
+  button.log-btn:disabled{opacity:.5;cursor:not-allowed;}
+
+  .form-msg{
+
+    font-family:'JetBrains Mono',monospace;
+
+    font-size:14px;
+
+    color:var(--navy-soft);
+
+  }
+
+  .form-msg.err{color:#A6482E;}
+
+  .form-msg.ok{color:#3E7A4E;}
+
+
+
+  .feed-row{padding:10px 0;border-bottom:1px solid var(--line);}
+
+  .feed-row:last-child{border-bottom:none;}
+
+  .feed-top{display:flex;justify-content:space-between;font-size:17px;}
+
+  .feed-count{font-family:'JetBrains Mono',monospace;font-size:19px;font-weight:700;color:var(--saffron);}
+
+  .feed-meta{
+
+    font-family:'JetBrains Mono',monospace;
+
+    font-size:13px;
+
+    color:var(--navy-soft);
+
+    margin-top:2px;
+
+  }
+
+  .empty-note{
+
+    font-family:'JetBrains Mono',monospace;
+
+    font-size:15px;
+
+    color:var(--navy-soft);
+
+    padding:14px 0;
+
+  }
+
+
+
+  .hukam-frame{
+
+    position:relative;
+
+    margin-top:20px;
+
+    border:1px solid var(--saffron);
+
+    box-shadow:0 0 0 5px var(--bg-cream), 0 0 0 6px var(--saffron-soft);
+
+    border-radius:8px;
+
+    background:var(--bg-panel);
+
+    padding:26px 24px;
+
+  }
+
+  .hukam-frame .corner{width:26px;height:26px;}
+
+  .hukam-frame-header{text-align:center;margin-bottom:14px;}
+
+  .hukam-frame-eyebrow{
+
+    font-family:'JetBrains Mono',monospace;
+
+    font-size:13px;
+
+    letter-spacing:.14em;
+
+    text-transform:uppercase;
+
+    color:var(--navy-soft);
+
+    margin-bottom:6px;
+
+  }
+
+  .hukam-frame-title{
+
+    font-family:'Noto Serif Gurmukhi',serif;
+
+    font-weight:700;
+
+    font-size:22px;
+
+    color:var(--navy);
+
+  }
+
+  .hukam-raag{
+
+    font-family:'Noto Serif Gurmukhi',serif;
+
+    font-weight:700;
+
+    font-size:19px;
+
+    color:var(--saffron);
+
+    text-align:center;
+
+    margin:10px 0 14px;
+
+  }
+
+  .hukam-verse{
+
+    font-family:'Noto Serif Gurmukhi',serif;
+
+    font-size:22px;
+
+    line-height:1.85;
+
+    color:var(--navy);
+
+    text-align:center;
+
+    margin:0 0 18px;
+
+  }
+
+  .hukam-divider{
+
+    display:flex;align-items:center;gap:10px;
+
+    margin:16px 0;
+
+    color:var(--saffron-soft);
+
+  }
+
+  .hukam-divider .ln{flex:1;height:1px;background:linear-gradient(90deg, transparent, var(--saffron-soft), transparent);}
+
+  .hukam-divider .mark{font-size:13px;}
+
+  .hukam-viakhya-label{
+
+    font-family:'JetBrains Mono',monospace;
+
+    font-size:13px;
+
+    letter-spacing:.1em;
+
+    text-transform:uppercase;
+
+    color:var(--navy-soft);
+
+    margin-bottom:8px;
+
+  }
+
+  .hukam-viakhya{
+
+    font-family:'Noto Serif Gurmukhi',serif;
+
+    font-size:18px;
+
+    line-height:1.75;
+
+    color:var(--ink);
+
+  }
+
+  .hukam-footer{
+
+    margin-top:18px;
+
+    padding-top:14px;
+
+    border-top:1px solid var(--line);
+
+    display:flex;
+
+    justify-content:space-between;
+
+    flex-wrap:wrap;
+
+    gap:8px;
+
+    font-family:'JetBrains Mono',monospace;
+
+    font-size:13px;
+
+    color:var(--navy-soft);
+
+  }
+
+  .hukam-footer a{color:var(--saffron);text-decoration:none;}
+
+  .hukam-footer a:hover{text-decoration:underline;}
+
+
+
+  .footer-note{
+
+    margin-top:26px;
+
+    font-family:'JetBrains Mono',monospace;
+
+    font-size:13px;
+
+    color:var(--navy-soft);
+
+    text-align:center;
+
+    letter-spacing:.04em;
+
+  }
+
+
+
+  .info-frame{
+
+    position:relative;
+
+    margin-bottom:26px;
+
+    border:1px solid var(--saffron);
+
+    box-shadow:0 0 0 5px var(--bg-cream), 0 0 0 6px var(--saffron-soft);
+
+    border-radius:8px;
+
+    background:var(--bg-panel);
+
+    overflow:hidden;
+
+  }
+
+  .info-frame .corner{width:26px;height:26px;}
+
+  .info-photo{
+    position:relative;
+    width:100%;
+    aspect-ratio:16/9;
+    background:var(--bg-panel-2);
+    border-bottom:2px solid var(--line);
+    overflow:hidden;
+  }
+  .info-photo img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    object-position:center;
+    display:block;
+  }
+  @media (max-width:600px){
+    .info-photo{ aspect-ratio:4/3; }
+  }
+
+  .info-text{padding:22px 24px 26px;}
+  .info-announcement{
+    font-family:'Noto Serif Gurmukhi',serif;
+    font-size:20px;
+    line-height:1.8;
+    color:var(--ink);
+    text-align:center;
+  }
+  .info-announcement p{
+    margin:0 0 16px;
+  }
+  .info-announcement p:last-child{margin-bottom:0;}
+  .info-announcement strong{
+    color:var(--navy);
+    font-weight:700;
+  }
+
+  .info-text p{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:19px;
+
+    line-height:1.65;
+
+    color:var(--ink);
+
+    margin:0;
+
+  }
+
+</style>
+
+</head>
+
+<body>
+
+<div class="frame">
+
+  <div class="corner tl"><svg viewBox="0 0 40 40"><path d="M2 38 Q2 2 38 2" stroke="var(--saffron)" stroke-width="1.4" fill="none"/><circle cx="2" cy="38" r="2.2" fill="var(--saffron)"/><circle cx="38" cy="2" r="2.2" fill="var(--saffron)"/></svg></div>
+
+  <div class="corner tr"><svg viewBox="0 0 40 40"><path d="M2 38 Q2 2 38 2" stroke="var(--saffron)" stroke-width="1.4" fill="none"/><circle cx="2" cy="38" r="2.2" fill="var(--saffron)"/><circle cx="38" cy="2" r="2.2" fill="var(--saffron)"/></svg></div>
+
+  <div class="corner bl"><svg viewBox="0 0 40 40"><path d="M2 38 Q2 2 38 2" stroke="var(--saffron)" stroke-width="1.4" fill="none"/><circle cx="2" cy="38" r="2.2" fill="var(--saffron)"/><circle cx="38" cy="2" r="2.2" fill="var(--saffron)"/></svg></div>
+
+  <div class="corner br"><svg viewBox="0 0 40 40"><path d="M2 38 Q2 2 38 2" stroke="var(--saffron)" stroke-width="1.4" fill="none"/><circle cx="2" cy="38" r="2.2" fill="var(--saffron)"/><circle cx="38" cy="2" r="2.2" fill="var(--saffron)"/></svg></div>
+
+
+
+  <div class="brand-mark"><a href="https://WaheguruJaap.com">WaheguruJaap.com</a></div>
+
+
+
+<div class="wrap">
+
+
+
+  <!-- ============================================================
+
+       PHOTO + INTRO — to add your own photo, replace the
+
+       <div class="info-photo-inner">...</div> block below with:
+
+       <img src="your-photo.jpg" alt="Description" style="width:100%;height:100%;object-fit:cover;">
+
+       Then edit the paragraph text in .info-text to introduce your
+
+       sangat / initiative to visitors before they log their jaap.
+
+       ============================================================ -->
+
+  <div class="info-frame">
+
+    <div class="corner tl"><svg viewBox="0 0 40 40"><path d="M2 38 Q2 2 38 2" stroke="var(--saffron)" stroke-width="1.4" fill="none"/><circle cx="2" cy="38" r="2.2" fill="var(--saffron)"/><circle cx="38" cy="2" r="2.2" fill="var(--saffron)"/></svg></div>
+
+    <div class="corner tr"><svg viewBox="0 0 40 40"><path d="M2 38 Q2 2 38 2" stroke="var(--saffron)" stroke-width="1.4" fill="none"/><circle cx="2" cy="38" r="2.2" fill="var(--saffron)"/><circle cx="38" cy="2" r="2.2" fill="var(--saffron)"/></svg></div>
+
+    <div class="corner bl"><svg viewBox="0 0 40 40"><path d="M2 38 Q2 2 38 2" stroke="var(--saffron)" stroke-width="1.4" fill="none"/><circle cx="2" cy="38" r="2.2" fill="var(--saffron)"/><circle cx="38" cy="2" r="2.2" fill="var(--saffron)"/></svg></div>
+
+    <div class="corner br"><svg viewBox="0 0 40 40"><path d="M2 38 Q2 2 38 2" stroke="var(--saffron)" stroke-width="1.4" fill="none"/><circle cx="2" cy="38" r="2.2" fill="var(--saffron)"/><circle cx="38" cy="2" r="2.2" fill="var(--saffron)"/></svg></div>
+
+    <div class="info-photo">
+
+      <img src="nankana-sahib.jpg" alt="Sangat gathering site">
+
+    </div>
+
+    <div class="info-text">
+
+      <div class="info-announcement">
+        <p><strong>ਵਾਹਿਗੁਰੂ ਜੀ ਕਾ ਖਾਲਸਾ॥ ਵਾਹਿਗੁਰੂ ਜੀ ਕੀ ਫਤਹਿ॥</strong></p>
+
+        <p><strong>ਸਾਧ ਸੰਗਤ ਜੀ,</strong></p>
+
+        <p>ਗੁਰੂ ਸਾਹਿਬ ਜੀ ਦੀ ਅਪਾਰ ਕਿਰਪਾ ਸਦਕਾ, ਵਰਜੀਨੀਆ ਗੁਰਦੁਆਰਾ ਸਾਹਿਬ ਵਿਖੇ ਵਾਪਰੀ ਦੁਖਦਾਈ ਘਟਨਾ ਉਪਰੰਤ, <strong>29 ਜੁਲਾਈ 2026</strong> ਨੂੰ ਸ੍ਰੀ ਗੁਰੂ ਗ੍ਰੰਥ ਸਾਹਿਬ ਜੀ ਤੋਂ ਖਿਮਾ-ਯਾਚਨਾ ਲਈ <strong>1 ਲੱਖ ਚੌਪਈ ਸਾਹਿਬ</strong> ਜੀ ਦੇ ਜਾਪ ਦੀ ਅਰੰਭਤਾ ਕੀਤੀ ਗਈ ਸੀ।</p>
+
+        <p>ਗੁਰੂ ਸਾਹਿਬ ਜੀ ਦੀ ਬੇਅੰਤ ਮਿਹਰ ਅਤੇ <strong>ਦੁਨੀਆ ਭਰ ਦੀ ਗੁਰੂ ਨਾਨਕ ਨਾਮ ਲੇਵਾ ਸਾਧ ਸੰਗਤ ਦੇ ਸਾਂਝੇ ਯਤਨਾਂ, ਪਾਠ ਅਤੇ ਅਰਦਾਸਾਂ</strong> ਸਦਕਾ, ਅੱਜ <strong>29 ਅਗਸਤ 2026</strong> ਨੂੰ <strong>1 ਲੱਖ ਚੌਪਈ ਸਾਹਿਬ ਜੀ ਦੇ ਜਾਪ ਦੀ ਸੰਪੂਰਨਤਾ</strong> ਹੋ ਗਈ ਹੈ।</p>
+		
+		<div class="divider"><span class="ln"></span><span class="mark">❖</span><span class="ln"></span></div>
+
+        <p>ਸੰਗਤ ਜੀ, ਹੁਣ ਅਸੀਂ ਸਾਰੇ ਇਸ ਗਰੁੱਪ ਵਿੱਚ <strong>ਗੁਰੂ ਨਾਨਕ ਦੇਵ ਸਾਹਿਬ ਜੀ ਦੇ ਆਗਮਨ ਪੁਰਬ ਜੋਕਿ 24 ਨਵੰਬਰ 2026 ਨੂੰ ਆ ਰਿਹਾ ਹੈ ਜਿਸ ਨੂੰ ਸਮਰਪਿਤ ਮੂਲ ਮੰਤਰ ਦਾ ਜਾਪ ਸ਼ੁਰੂ ਕਰਾਂਗੇ</strong></p>
+
+        <p>ਇਸ ਨਵੇਂ ਫਾਰਮ ਤੇ ਲਾਈਵ ਕਾਉਂਟਿੰਗ ਦਾ ਵਿਕਲਪ ਵੀ ਹੋਵੇਗਾ।</p>
+
+        <p>ਸੰਗਤ ਜੀ, ਤੁਸੀਂ ਇਹ ਮੂਲ ਮੰਤਰ ਦੇ ਜਾਪ ਕਰਨ ਵਾਸਤੇ ਮਾਲਾ ਜਾਂ ਕਾਊਂਟਰ ਦੀ ਵਰਤੋਂ ਵੀ ਕਰ ਸਕਦੇ ਹੋ। ਆਪਣੇ ਦਿਨ ਭਰ ਦੇ ਕੀਤੇ ਮੂਲ ਮੰਤਰ ਜਾਪ ਥੱਲੇ ਦਿੱਤੇ ਫਾਰਮ ਤੇ ਰਜਿਸਟਰ ਕਰਨੇ ਹਨ। ਤਾਂਕਿ ਆਖਰੀ ਦਿਨ ਗੁਰੂ ਸਾਹਿਬ ਜੀ ਦੇ ਪ੍ਰਕਾਸ਼ ਗੁਰਪੁਰਬ ਵਾਲੇ ਦਿਨ ਸੰਗਤੀ ਰੂਪ ਵਿੱਚ ਕੀਤੇ ਜਾਪਾਂ ਦੀ ਅਰਦਾਸ ਕੀਤੀ ਜਾ ਸਕੇ।</p>
+
+        <p>ਕਿਰਪਾ ਕਰਕੇ ਪੂਰੀ ਸ਼ਰਧਾ, ਪਿਆਰ ਅਤੇ ਸਮਰਪਣ ਨਾਲ ਇਸ ਸੰਗਤੀ <strong>ਮੂਲ ਮੰਤਰ ਜਾਪ</strong> ਵਿੱਚ ਭਾਗ ਲਵੋ।</p>
+
+        <p><strong>ਵਾਹਿਗੁਰੂ ਜੀ ਕਾ ਖਾਲਸਾ॥</strong><br><strong>ਵਾਹਿਗੁਰੂ ਜੀ ਕੀ ਫਤਹਿ॥</strong></p>
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+  <div class="gurmukhi-title">ਮੂਲ ਮੰਤਰ ਜਾਪ</div>
+
+  <h1 class="title">Mool Mantar <span>Jaap</span></h1>
+
+  <div class="divider"><span class="ln"></span><span class="mark">❖</span><span class="ln"></span></div>
+
+  <div class="total-panel">
+
+    <div class="total-label">
+
+      <span>Total jaap, All sangat combined</span>
+
+      <button class="refresh-btn" id="refreshBtn" type="button">Refresh</button>
+
+    </div>
+
+    <div class="total-number" id="totalNumber"><small>loading…</small></div>
+
+  </div>
+
+
+
+  <div class="card">
+
+    <h2>Log your jaap</h2>
+
+    <form id="logForm">
+
+      <div class="field">
+
+        <label for="nameInput">Name</label>
+
+        <input id="nameInput" type="text" placeholder="e.g. Simran Kaur" maxlength="60" required>
+
+      </div>
+
+      <div class="field">
+
+        <label for="emailInput">Email</label>
+
+        <input id="emailInput" type="email" placeholder="you@example.com" maxlength="100" required>
+
+      </div>
+
+      <div class="field">
+
+        <label for="phoneInput">Phone (optional)</label>
+
+        <input id="phoneInput" type="tel" placeholder="e.g. +61 4xx xxx xxx" maxlength="30">
+
+      </div>
+
+      <div class="field">
+
+        <label for="cityInput">City</label>
+
+        <input id="cityInput" type="text" placeholder="e.g. Sydney" maxlength="60" required>
+
+      </div>
+
+      <div class="field">
+
+        <label for="countryInput">Country</label>
+
+        <input id="countryInput" type="text" placeholder="e.g. Australia" maxlength="60" required>
+
+      </div>
+
+      <div class="field">
+
+        <label for="repsInput">Jaap count</label>
+
+        <input id="repsInput" type="number" placeholder="0" min="1" max="100000" step="1" required>
+
+      </div>
+
+      <div class="submit-row">
+
+        <button type="submit" class="log-btn" id="submitBtn">Submit</button>
+
+        <span class="form-msg" id="formMsg"></span>
+
+      </div>
+
+    </form>
+
+  </div>
+
+
+
+  <div class="divider"><span class="ln"></span><span class="mark">❖</span><span class="ln"></span></div>
+
+
+
+  <div class="card">
+
+    <h2>Recent submissions</h2>
+
+    <div id="feed"><div class="empty-note">Loading…</div></div>
+
+  </div>
+
+
+
+	<div class="divider"><span class="ln"></span><span class="mark">❖</span><span class="ln"></span></div>
+
+  <!-- ============================================================
+
+       HUKAMNAMA TEXT — update this block daily (or as often as you
+
+       like) with the current Hukamnama. Source used for the content
+
+       below: hukamnamasahib.com, 25-08-26, Ang 618.
+
+       ============================================================ -->
+
+  <div class="hukam-frame">
+
+    <div class="corner tl"><svg viewBox="0 0 40 40"><path d="M2 38 Q2 2 38 2" stroke="var(--saffron)" stroke-width="1.4" fill="none"/><circle cx="2" cy="38" r="2.2" fill="var(--saffron)"/><circle cx="38" cy="2" r="2.2" fill="var(--saffron)"/></svg></div>
+
+    <div class="corner tr"><svg viewBox="0 0 40 40"><path d="M2 38 Q2 2 38 2" stroke="var(--saffron)" stroke-width="1.4" fill="none"/><circle cx="2" cy="38" r="2.2" fill="var(--saffron)"/><circle cx="38" cy="2" r="2.2" fill="var(--saffron)"/></svg></div>
+
+    <div class="corner bl"><svg viewBox="0 0 40 40"><path d="M2 38 Q2 2 38 2" stroke="var(--saffron)" stroke-width="1.4" fill="none"/><circle cx="2" cy="38" r="2.2" fill="var(--saffron)"/><circle cx="38" cy="2" r="2.2" fill="var(--saffron)"/></svg></div>
+
+    <div class="corner br"><svg viewBox="0 0 40 40"><path d="M2 38 Q2 2 38 2" stroke="var(--saffron)" stroke-width="1.4" fill="none"/><circle cx="2" cy="38" r="2.2" fill="var(--saffron)"/><circle cx="38" cy="2" r="2.2" fill="var(--saffron)"/></svg></div>
+
+
+
+    <div class="hukam-frame-header">
+
+      <div class="hukam-frame-title">ਹੁਕਮਨਾਮਾ</div>
+
+    </div>
+
+
+
+    <div class="hukam-raag">ਸੋਰਠਿ ਮਹਲਾ ੫ ॥</div>
+
+
+
+    <div class="hukam-verse">
+
+      ਅੰਤਰ ਕੀ ਗਤਿ ਤੁਮ ਹੀ ਜਾਨੀ ਤੁਝ ਹੀ ਪਾਹਿ ਨਿਬੇਰੋ ॥<br>
+
+      ਬਖਸਿ ਲੈਹੁ ਸਾਹਿਬ ਪ੍ਰਭ ਅਪਨੇ ਲਾਖ ਖਤੇ ਕਰਿ ਫੇਰੋ ॥੧॥<br>
+
+      ਪ੍ਰਭ ਜੀ ਤੂ ਮੇਰੋ ਠਾਕੁਰੁ ਨੇਰੋ ॥<br>
+
+      ਹਰਿ ਚਰਣ ਸਰਣ ਮੋਹਿ ਚੇਰੋ ॥੧॥ ਰਹਾਉ ॥
+
+    </div>
+
+
+
+    <div class="hukam-divider"><span class="ln"></span><span class="mark">❖</span><span class="ln"></span></div>
+
+
+
+    <div class="hukam-viakhya-label">ਵਿਆਖਿਆ</div>
+
+    <div class="hukam-viakhya">
+
+      ਹੇ ਮੇਰੇ ਆਪਣੇ ਮਾਲਕ ਪ੍ਰਭੂ! ਮੇਰੇ ਦਿਲ ਦੀ ਹਾਲਤ ਤੂੰ ਹੀ ਜਾਣਦਾ ਹੈਂ, ਤੇਰੀ ਸਰਨ ਪਿਆਂ ਹੀ
+
+      (ਮੇਰੀ ਅੰਦਰਲੀ ਮੰਦੀ ਹਾਲਤ ਦਾ) ਖਾਤਮਾ ਹੋ ਸਕਦਾ ਹੈ। ਮੈਂ ਲੱਖਾਂ ਪਾਪ ਕਰਦਾ ਫਿਰਦਾ ਹਾਂ।
+
+      ਹੇ ਮੇਰੇ ਮਾਲਕ! ਮੈਨੂੰ ਬਖ਼ਸ਼ ਲੈ।੧। ਹੇ ਪ੍ਰਭੂ ਜੀ! ਤੂੰ ਮੇਰਾ ਪਾਲਣਹਾਰਾ ਮਾਲਕ ਹੈਂ, ਮੇਰੇ
+
+      ਅੰਗ-ਸੰਗ ਵੱਸਦਾ ਹੈਂ। ਹੇ ਹਰੀ! ਮੈਨੂੰ ਆਪਣੇ ਚਰਨਾਂ ਦੀ ਸਰਨ ਵਿਚ ਰੱਖ, ਮੈਨੂੰ ਆਪਣਾ ਦਾਸ
+
+      ਬਣਾਈ ਰੱਖ। ।੧। ਰਹਾਉ।
+
+    </div>
+
+
+
+    <div class="hukam-footer">
+
+      <span>25-08-26 · ਅੰਗ 618</span>
+
+    </div>
+
+  </div>
+
+
+
+</div>
+
+</div>
+
+
+
+<script>
+
+// ======================================================
+
+// PASTE YOUR DEPLOYED APPS SCRIPT WEB APP URL HERE:
+
+const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzcCbKramcWrHWHLB6UIQspD_vHdZM9i-GlN17HjOeyy0C9FrTIM3IK6nfqj9dryzmW/exec';
+
+// ======================================================
+
+
+
+const CONTACT_KEY = 'jaap1313-my-details';
+
+let entries = [];
+
+
+
+function isConfigured(){
+
+  return APPS_SCRIPT_URL && APPS_SCRIPT_URL.indexOf('https://') === 0;
+
+}
+
+
+
+function loadSavedDetails(){
+
+  try{
+
+    const raw = localStorage.getItem(CONTACT_KEY);
+
+    if(!raw) return;
+
+    const d = JSON.parse(raw);
+
+    if(d.name) document.getElementById('nameInput').value = d.name;
+
+    if(d.email) document.getElementById('emailInput').value = d.email;
+
+    if(d.phone) document.getElementById('phoneInput').value = d.phone;
+
+    if(d.city) document.getElementById('cityInput').value = d.city;
+
+    if(d.country) document.getElementById('countryInput').value = d.country;
+
+  }catch(e){ /* ignore */ }
+
+}
+
+function saveDetails(d){
+
+  try{ localStorage.setItem(CONTACT_KEY, JSON.stringify(d)); }catch(e){ /* ignore */ }
+
+}
+
+
+
+async function loadEntries(){
+
+  if(!isConfigured()){
+
+    document.getElementById('totalNumber').innerHTML = '0 <small>Jaaps completed</small>';
+
+    document.getElementById('feed').innerHTML = '<div class="empty-note">Recent jaap will show up here.</div>';
+
+    return;
+
+  }
+
+  try{
+
+    const res = await fetch(APPS_SCRIPT_URL, { method: 'GET' });
+
+    const data = await res.json();
+
+    entries = (data && data.ok && data.entries) ? data.entries : [];
+
+  }catch(e){
+
+    console.error('load failed', e);
+
+    entries = [];
+
+  }
+
+  render();
+
+}
+
+
+
+async function addEntry(payload){
+
+  const res = await fetch(APPS_SCRIPT_URL, {
+
+    method: 'POST',
+
+    body: JSON.stringify(Object.assign({ action: 'add' }, payload))
+
+  });
+
+  const data = await res.json();
+
+  return !!(data && data.ok);
+
+}
+
+
+
+function grandTotal(){
+
+  return entries.reduce((s,e)=>s+Number(e.count||0),0);
+
+}
+
+
+
+function renderTotal(){
+
+  const total = grandTotal();
+
+  document.getElementById('totalNumber').innerHTML =
+
+    total.toLocaleString() + ' <small>Jaaps completed</small>';
+
+}
+
+
+
+function renderFeed(){
+
+  const el = document.getElementById('feed');
+
+  if(entries.length === 0){
+
+    el.innerHTML = '<div class="empty-note">Recent jaap will show up here.</div>';
+
+    return;
+
+  }
+
+  const recent = [...entries].sort((a,b)=> (b.submittedAt||0) - (a.submittedAt||0)).slice(0,5);
+
+  el.innerHTML = recent.map(e=>{
+
+    const place = [e.city, e.country].filter(Boolean).join(', ');
+
+    const metaParts = [place, e.date].filter(Boolean).join(' · ');
+
+    return `
+
+    <div class="feed-row">
+
+      <div class="feed-top">
+
+        <span class="feed-count">+${Number(e.count||0).toLocaleString()}</span>
+
+      </div>
+
+      <div class="feed-meta">${escapeHtml(metaParts)}</div>
+
+    </div>
+
+  `;}).join('');
+
+}
+
+
+
+function escapeHtml(str){
+
+  const d = document.createElement('div');
+
+  d.textContent = str;
+
+  return d.innerHTML;
+
+}
+
+
+
+function render(){
+
+  renderTotal();
+
+  renderFeed();
+
+}
+
+
+
+document.getElementById('logForm').addEventListener('submit', async (ev)=>{
+
+  ev.preventDefault();
+
+  const nameInput = document.getElementById('nameInput');
+
+  const emailInput = document.getElementById('emailInput');
+
+  const phoneInput = document.getElementById('phoneInput');
+
+  const cityInput = document.getElementById('cityInput');
+
+  const countryInput = document.getElementById('countryInput');
+
+  const repsInput = document.getElementById('repsInput');
+
+  const btn = document.getElementById('submitBtn');
+
+  const msg = document.getElementById('formMsg');
+
+
+
+  if(!isConfigured()){
+
+    msg.textContent = 'Backend not connected yet.';
+
+    msg.className = 'form-msg err';
+
+    return;
+
+  }
+
+
+
+  const name = nameInput.value.trim();
+
+  const email = emailInput.value.trim();
+
+  const phone = phoneInput.value.trim();
+
+  const city = cityInput.value.trim();
+
+  const country = countryInput.value.trim();
+
+  const count = parseInt(repsInput.value, 10);
+
+  const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+
+
+
+  if(!name){ msg.textContent = 'Enter a name.'; msg.className='form-msg err'; return; }
+
+  if(!emailOk){ msg.textContent = 'Enter a valid email.'; msg.className='form-msg err'; return; }
+
+  if(!city){ msg.textContent = 'Enter a city.'; msg.className='form-msg err'; return; }
+
+  if(!country){ msg.textContent = 'Enter a country.'; msg.className='form-msg err'; return; }
+
+  if(!count || count <= 0){ msg.textContent = 'Enter a jaap count above 0.'; msg.className='form-msg err'; return; }
+
+
+
+  btn.disabled = true;
+
+  msg.textContent = 'Submitting…';
+
+  msg.className = 'form-msg';
+
+
+
+  try{
+
+    const ok = await addEntry({ name, email, phone, city, country, count });
+
+    if(ok){
+
+      saveDetails({ name, email, phone, city, country });
+
+      await loadEntries();
+
+      repsInput.value = '';
+
+      repsInput.focus();
+
+      msg.textContent = 'Logged. Waheguru ji ka Khalsa.';
+
+      msg.className = 'form-msg ok';
+
+    } else {
+
+      msg.textContent = 'Could not save — try again.';
+
+      msg.className = 'form-msg err';
+
+    }
+
+  }catch(e){
+
+    console.error(e);
+
+    msg.textContent = 'Network error — check your connection and try again.';
+
+    msg.className = 'form-msg err';
+
+  }
+
+  btn.disabled = false;
+
+});
+
+
+
+document.getElementById('refreshBtn').addEventListener('click', loadEntries);
+
+
+
+loadSavedDetails();
+
+loadEntries();
+
+</script>
+
+</body>
+
+</html>
+
