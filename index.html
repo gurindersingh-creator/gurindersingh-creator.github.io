@@ -2419,6 +2419,68 @@
 
 
 
+
+
+  /* Recently updated announcement: background highlight with a hard colour switch every second */
+  .info-announcement.recent-update {
+    background: #fff7e8;
+    border: 4px solid #e8690f;
+    border-radius: 12px;
+    padding: 22px 20px;
+    box-shadow: 0 8px 22px rgba(15,42,82,.12);
+    animation: updateBorderFlash 2s steps(1, end) infinite;
+  }
+
+  .recent-update-label {
+    display: block;
+    width: fit-content;
+    margin: 0 auto 18px;
+    padding: 8px 16px;
+    border-radius: 999px;
+    background: #0f2a52;
+    color: #fff7e8;
+    border: 2px solid #e8690f;
+    font-weight: 800;
+    text-align: center;
+    animation: updateLabelFlash 2s steps(1, end) infinite;
+  }
+
+  @keyframes updateBorderFlash {
+    0%, 49.999% {
+      border-color: #e8690f;
+      background: #fff7e8;
+      box-shadow: 0 0 0 5px rgba(232,105,15,.18), 0 8px 22px rgba(15,42,82,.12);
+    }
+    50%, 100% {
+      border-color: #0f2a52;
+      background: #fff1dc;
+      box-shadow: 0 0 0 5px rgba(15,42,82,.16), 0 8px 22px rgba(232,105,15,.16);
+    }
+  }
+
+  @keyframes updateLabelFlash {
+    0%, 49.999% {
+      background: #0f2a52;
+      color: #ffffff;
+      border-color: #e8690f;
+    }
+    50%, 100% {
+      background: #e8690f;
+      color: #0f2a52;
+      border-color: #0f2a52;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .info-announcement.recent-update,
+    .recent-update-label { animation: none; }
+  }
+
+  @media (max-width: 600px) {
+    .info-announcement.recent-update { padding: 17px 14px; border-width: 3px; }
+    .recent-update-label { font-size: 13px; padding: 7px 12px; }
+  }
+
 </style>
 
 
@@ -2566,132 +2628,26 @@
 
 
 
-      <div class="info-announcement lang-pa">
-
-
+      <div class="info-announcement recent-update lang-pa">
+        <div class="recent-update-label">ਨਵੀਂ ਜਾਣਕਾਰੀ • ਹਾਲ ਹੀ ਵਿੱਚ ਅੱਪਡੇਟ ਕੀਤੀ ਗਈ</div>
         <p><strong>ਵਾਹਿਗੁਰੂ ਜੀ ਕਾ ਖਾਲਸਾ॥ ਵਾਹਿਗੁਰੂ ਜੀ ਕੀ ਫਤਹਿ॥</strong></p>
-
-
-
-
-
         <p><strong>ਸਾਧ ਸੰਗਤ ਜੀ,</strong></p>
-
-
-
-
-
-        <p>ਗੁਰੂ ਸਾਹਿਬ ਜੀ ਦੀ ਅਪਾਰ ਕਿਰਪਾ ਸਦਕਾ, ਵਰਜੀਨੀਆ ਗੁਰਦੁਆਰਾ ਸਾਹਿਬ ਵਿਖੇ ਵਾਪਰੀ ਦੁਖਦਾਈ ਘਟਨਾ ਉਪਰੰਤ, <strong>੨੯ ਜੁਲਾਈ ੨੦੨੬</strong> ਨੂੰ ਸ੍ਰੀ ਗੁਰੂ ਗ੍ਰੰਥ ਸਾਹਿਬ ਜੀ ਤੋਂ ਖਿਮਾ ਯਾਚਨਾ ਲਈ <strong>੧ ਲੱਖ ਚੌਪਈ ਸਾਹਿਬ</strong> ਜੀ ਦੇ ਜਾਪ ਦੀ ਅਰੰਭਤਾ ਕੀਤੀ ਗਈ ਸੀ।</p>
-
-
-
-
-
-        <p>ਗੁਰੂ ਸਾਹਿਬ ਜੀ ਦੀ ਬੇਅੰਤ ਮਿਹਰ ਅਤੇ <strong>ਦੁਨੀਆ ਭਰ ਦੀ ਗੁਰੂ ਨਾਨਕ ਨਾਮ ਲੇਵਾ ਸਾਧ ਸੰਗਤ ਦੇ ਸਾਂਝੇ ਯਤਨਾਂ, ਪਾਠ ਅਤੇ ਅਰਦਾਸਾਂ</strong> ਸਦਕਾ, <strong>੨੯ ਅਗਸਤ ੨੦੨੬</strong> ਨੂੰ <strong>੧ ਲੱਖ ਚੌਪਈ ਸਾਹਿਬ ਜੀ ਦੇ ਜਾਪ ਦੀ ਸੰਪੂਰਨਤਾ</strong> ਹੋ ਗਈ ਹੈ।</p>
-
-
-		
-
-
-		<div class="divider"><span class="ln"></span><span class="mark">❖</span><span class="ln"></span></div>
-
-
-
-
-
-        <p>ਸੰਗਤ ਜੀ, ਹੁਣ <strong>੩੦ ਅਗਸਤ ੨੦੨੬</strong> ਤੋਂ <strong>ਗੁਰੂ ਨਾਨਕ ਦੇਵ ਸਾਹਿਬ ਜੀ ਦੇ ਆਗਮਨ ਪੁਰਬ ਜੋਕਿ ੨੪ ਨਵੰਬਰ ੨੦੨੬ ਨੂੰ ਆ ਰਿਹਾ ਹੈ ਜਿਸ ਨੂੰ ਸਮਰਪਿਤ ਮੂਲ ਮੰਤਰ ਦਾ ਜਾਪ ਸ਼ੁਰੂ ਹੈ।</strong></p>
-
-
-
-
-
-       <p>ਇਸ ਨਵੇਂ ਫਾਰਮ ਤੇ ਲਾਈਵ ਕਾਉਂਟਿੰਗ ਦਾ ਵਿਕਲਪ ਵੀ ਹੈ।</p> 
-
-
-
-
-
-        <p>ਸੰਗਤ ਜੀ, ਤੁਸੀਂ ਇਹ ਮੂਲ ਮੰਤਰ ਦੇ ਜਾਪ ਕਰਨ ਵਾਸਤੇ ਮਾਲਾ ਜਾਂ ਕਾਊਂਟਰ ਦੀ ਵਰਤੋਂ ਵੀ ਕਰ ਸਕਦੇ ਹੋ। ਆਪਣੇ ਦਿਨ ਭਰ ਦੇ ਕੀਤੇ ਮੂਲ ਮੰਤਰ ਜਾਪ ਥੱਲੇ ਦਿੱਤੇ ਫਾਰਮ ਤੇ ਰਜਿਸਟਰ ਕਰਨੇ ਹਨ। ਤਾਂਕਿ ਆਖਰੀ ਦਿਨ ਗੁਰੂ ਸਾਹਿਬ ਜੀ ਦੇ ਪ੍ਰਕਾਸ਼ ਗੁਰਪੁਰਬ ਵਾਲੇ ਦਿਨ ਸੰਗਤੀ ਰੂਪ ਵਿੱਚ ਕੀਤੇ ਜਾਪਾਂ ਦੀ ਅਰਦਾਸ ਕੀਤੀ ਜਾ ਸਕੇ।</p>
-
-
-
-
-
-        <p>ਕਿਰਪਾ ਕਰਕੇ ਪੂਰੀ ਸ਼ਰਧਾ, ਪਿਆਰ ਅਤੇ ਸਮਰਪਣ ਨਾਲ ਇਸ ਸੰਗਤੀ <strong>ਮੂਲ ਮੰਤਰ ਜਾਪ</strong> ਵਿੱਚ ਭਾਗ ਲਵੋ।</p>
-
-
-
-
-
-        <p><strong>ਵਾਹਿਗੁਰੂ ਜੀ ਕਾ ਖਾਲਸਾ॥</strong><br><strong>ਵਾਹਿਗੁਰੂ ਜੀ ਕੀ ਫਤਹਿ॥</strong></p>
-
-
+        <p>ਗੁਰੂ ਸਾਹਿਬ ਜੀ ਦੀ ਅਪਾਰ ਕਿਰਪਾ ਸਦਕਾ ਅਤੇ ਦੁਨੀਆ ਭਰ ਦੀ ਗੁਰੂ ਨਾਨਕ ਨਾਮ ਲੇਵਾ ਸੰਗਤ ਦੇ ਸਾਂਝੇ ਯਤਨਾਂ ਨਾਲ <strong>ਸ੍ਰੀ ਗੁਰੂ ਨਾਨਕ ਦੇਵ ਜੀ ਦੇ ਪ੍ਰਕਾਸ਼ ਗੁਰਪੁਰਬ ਨੂੰ ਸਮਰਪਿਤ ਸੰਗਤੀ ਮੂਲ ਮੰਤਰ ਜਾਪ</strong> ਨਿਰੰਤਰ ਚੱਲ ਰਿਹਾ ਹੈ ਅਤੇ <strong>24 ਨਵੰਬਰ 2026 ਦੇ ਗੁਰਪੁਰਬ ਦਿਹਾੜੇ</strong> ਤੱਕ ਜਾਰੀ ਰਹੇਗਾ।</p>
+        <p>ਸਮੂਹ ਸੰਗਤ ਦਾ ਦਿਲੋਂ ਧੰਨਵਾਦ, ਜਿਨ੍ਹਾਂ ਨੇ ਆਪਣੇ ਕੀਮਤੀ ਸਮੇਂ, ਪਿਆਰ, ਸ਼ਰਧਾ ਅਤੇ ਸਮਰਪਣ ਨਾਲ ਸੰਗਤੀ ਜਾਪ ਵਿੱਚ ਭਾਗ ਲਿਆ ਅਤੇ ਲਗਾਤਾਰ ਯੋਗਦਾਨ ਪਾ ਰਹੇ ਹਨ। ਗੁਰੂ ਸਾਹਿਬ ਜੀ ਕਿਰਪਾ ਕਰਨ ਕਿ ਸੰਗਤ ਵੱਲੋਂ ਕੀਤੀ ਨਾਮ ਬਾਣੀ ਦੀ ਕਮਾਈ ਗੁਰੂ ਚਰਨਾਂ ਵਿੱਚ ਪਰਵਾਨ ਹੋਵੇ ਅਤੇ ਸਰਬੱਤ ਦੇ ਭਲੇ ਦਾ ਕਾਰਨ ਬਣੇ।</p>
+        <p>24 ਨਵੰਬਰ 2026 ਨੂੰ ਗੁਰਪੁਰਬ ਦੇ ਦਿਹਾੜੇ ਸੰਗਤੀ ਅਰਦਾਸ ਉਪਰੰਤ <strong>ਵਿਸਾਖੀ 2027 ਨੂੰ ਸਮਰਪਿਤ ਤੀਜੇ ਸੰਗਤੀ ਮੂਲ ਮੰਤਰ ਜਾਪ</strong> ਦੀ ਆਰੰਭਤਾ ਕੀਤੀ ਜਾਵੇਗੀ। ਉਸ ਦਿਨ ਗੁਰੂ ਸਾਹਿਬ ਜੀ ਦਾ ਪਾਵਨ ਹੁਕਮਨਾਮਾ ਵੀ ਸੰਗਤ ਨਾਲ ਸਾਂਝਾ ਕੀਤਾ ਜਾਵੇਗਾ, ਜੋ ਸਮੂਹ ਸੰਗਤ ਲਈ ਮਾਰਗਦਰਸ਼ਨ ਅਤੇ ਪ੍ਰੇਰਣਾ ਦਾ ਸਰੋਤ ਹੋਵੇਗਾ।</p>
+        <p><strong>ਸੰਗਤ ਜੀ, ਆਪ ਜੀ ਨੂੰ ਬੇਨਤੀ ਹੈ ਕਿ ਚੱਲ ਰਹੇ ਸੰਗਤੀ ਜਾਪ ਵਿੱਚ ਅਤੇ ਆਉਣ ਵਾਲੇ ਵਿਸਾਖੀ 2027 ਨੂੰ ਸਮਰਪਿਤ ਸੰਗਤੀ ਮੂਲ ਮੰਤਰ ਜਾਪ ਵਿੱਚ ਵੀ ਵੱਧ ਤੋਂ ਵੱਧ ਭਾਗ ਲਵੋ। ਸ਼ਰਧਾ, ਪ੍ਰੇਮ ਅਤੇ ਨਿਮਾਣਤਾ ਨਾਲ ਜਾਪ ਕਰਕੇ ਗੁਰੂ ਸਾਹਿਬ ਜੀ ਦੀਆਂ ਖੁਸ਼ੀਆਂ ਪ੍ਰਾਪਤ ਕਰੋ। ਆਓ, ਅਸੀਂ ਸਭ ਮਿਲ ਕੇ ਨਾਮ ਸਿਮਰਨ ਦੀ ਇਸ ਸੇਵਾ ਰਾਹੀਂ ਪੰਥ ਦੀ ਚੜ੍ਹਦੀ ਕਲਾ, ਸਰਬੱਤ ਦੇ ਭਲੇ ਅਤੇ ਸਮੁੱਚੀ ਮਨੁੱਖਤਾ ਦੀ ਭਲਾਈ ਲਈ ਅਰਦਾਸ ਕਰੀਏ ਅਤੇ ਆਪਣਾ ਯੋਗਦਾਨ ਪਾਈਏ।</strong></p>
+        <p><strong>ਵਾਹਿਗੁਰੂ ਜੀ ਕਾ ਖਾਲਸਾ॥ ਵਾਹਿਗੁਰੂ ਜੀ ਕੀ ਫਤਹਿ॥</strong></p>
       </div>
 
-
-
-
-
-      <div class="info-announcement lang-en" style="display:none;">
-
-
+      <div class="info-announcement recent-update lang-en" style="display:none;">
+        <div class="recent-update-label">NEW INFORMATION • RECENTLY UPDATED</div>
         <p><strong>Waheguru Ji Ka Khalsa, Waheguru Ji Ki Fateh.</strong></p>
-
-
-
-
-
         <p><strong>Dear Sadh Sangat Ji,</strong></p>
-
-
-
-
-
-        <p>By the boundless grace of Guru Sahib Ji, following the tragic incident at the Virginia Gurdwara Sahib, a recitation of <strong>1 lakh (100,000) Chaupai Sahib</strong> Ji was begun on <strong>29 July 2026</strong> to seek forgiveness before Sri Guru Granth Sahib Ji.</p>
-
-
-
-
-
-        <p>By Guru Sahib Ji's boundless mercy and <strong>the combined efforts, path, and ardaas of Guru Nanak Naam Lewa Sadh Sangat around the world</strong>, the <strong>recitation of 1 lakh Chaupai Sahib Ji was completed</strong> on <strong>29 August 2026</strong>.</p>
-
-
-
-
-
-        <div class="divider"><span class="ln"></span><span class="mark">❖</span><span class="ln"></span></div>
-
-
-
-
-
-        <p>Sangat Ji, from <strong>30 August 2026</strong>, we've begun, a recitation of <strong>Mool Mantar dedicated to Guru Nanak Dev Sahib Ji's Gurpurab (birth anniversary), which falls on 24 November 2026</strong>.</p>
-
-
-
-
-
-        <p>This new form includes live counting, so sanagat is up to date with count status.</p>
-
-
-
-
-
-        <p>Sangat Ji, you may use a mala (rosary) or a counter to keep track of your Mool Mantar jaap. Please register the jaap you complete each day on the form below, so that on the final day - Guru Sahib Ji's Parkash Gurpurab - an ardaas can be offered for the jaap done collectively by the sangat.</p>
-
-
-
-
-
-        <p>Please take part in this collective <strong>Mool Mantar Jaap</strong> with full faith, love, and devotion.</p>
-
-
-
-
-
-        <p><strong>Waheguru Ji Ka Khalsa,</strong><br><strong>Waheguru Ji Ki Fateh.</strong></p>
-
-
+        <p>By the boundless grace of Guru Sahib Ji and the collective efforts of Guru Nanak Naam-Leva Sangat across the world, the Sangati Mool Mantar Jaap dedicated to Sri Guru Nanak Dev Ji's Gurpurab is continuing and will remain open until <strong>24 November 2026</strong>, the day of Gurpurab.</p>
+        <p>We sincerely thank the entire Sangat for their ongoing participation, devotion, faith, and contribution to this Sangati Jaap. May this spiritual effort be accepted at the Guru's Lotus Feet and become a source of Chardi Kala and Sarbat da Bhala for all.</p>
+        <p>Following the collective Ardaas on Gurpurab, <strong>24 November 2026</strong>, the <strong>Third Sangati Mool Mantar Jaap dedicated to Vaisakhi 2027</strong> will commence. A sacred Hukamnama from Guru Sahib Ji will also be shared with the Sangat on that day to guide and inspire the upcoming Jaap.</p>
+        <p><strong>Sangat Ji, we humbly request you to continue participating in the ongoing Sangati Jaap and to join wholeheartedly in the forthcoming Third Sangati Mool Mantar Jaap dedicated to Vaisakhi 2027. With faith, love, and humility, may we engage in this Jaap and earn Guru Sahib Ji's blessings and happiness. Let us all contribute towards the seva of Naam Simran and pray for the Chardi Kala of the Panth, Sarbat da Bhala, and the well-being of all humanity.</strong></p>
+        <p><strong>Waheguru Ji Ka Khalsa, Waheguru Ji Ki Fateh.</strong></p>
       </div>
 
 
